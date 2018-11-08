@@ -1,0 +1,271 @@
+<html>
+  <head>
+    <style>
+      .room {
+        background-color: #00fff0;
+        height: 50vh;
+        width:15vw;
+        float:left;
+        margin-top: 45px;
+        margin-bottom: 100px;
+        margin-right: 10px;
+        margin-left: 10px;
+        border-radius: 12px;
+      }
+      h2{
+        text-align:center;
+        font-size:60;
+      }
+      h1 {
+        text-align:center;
+        font-size:30;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h2> Yui's Hotel </h2>
+    
+    <div class="room">
+      <h1>Room One</h1>
+      <p>enter name</p>
+       <input type="text" id="nameOne">
+       <button onclick="enterNameOne()">Enter</button>
+       <button onclick="lockOne()">Clean</button>
+       <button onclick="unlockOne()">Open</button>
+           <div id="a1" onclick="this.innerHTML = ''"></div>
+           <div id="a2" onclick="this.innerHTML = ''"></div>
+           <div id="a3" onclick="this.innerHTML = ''"></div>
+           <div id="a4" onclick="this.innerHTML = ''"></div>
+    </div>
+    <div class="room">
+      <h1>Room Two</h1>
+      <p>enter name</p>
+       <input type = "text" id = "nameTwo">
+       <button onclick = "enterNameTwo()">Enter</button>
+       <button onclick="lockTwo()">Clean</button>
+       <button onclick="unlockTwo()">Open</button>
+           <div id="b1" onclick="this.innerHTML = ''"></div>
+           <div id="b2" onclick="this.innerHTML = ''"></div>
+           <div id="b3" onclick="this.innerHTML = ''"></div>
+           <div id="b4" onclick="this.innerHTML = ''"></div>
+
+    </div>
+    <div class="room">
+      <h1>Room Three</h1>
+      <p>enter name</p>
+       <input type = "text" id = "nameThree">
+       <button onclick = "enterNameThree()">Enter</button>
+       <button onclick="lockThree()">Clean</button>
+       <button onclick="unlockThree()">Open</button>
+           <div id="c1" onclick="this.innerHTML = ''"></div>
+           <div id="c2" onclick="this.innerHTML = ''"></div>
+           <div id="c3" onclick="this.innerHTML = ''"></div>
+           <div id="c4" onclick="this.innerHTML = ''"></div>
+    </div>
+    <div class="room">
+      <h1>Room Four</h1>
+      <p>enter name</p>
+       <input type = "text" id = "nameFour">
+       <button onclick = "enterNameFour()">Enter</button>
+       <button onclick="lockFour()">Clean</button>
+       <button onclick="unlockFour()">Open</button>
+           <div id="d1" onclick="this.innerHTML = ''"></div>
+           <div id="d2" onclick="this.innerHTML = ''"></div>
+           <div id="d3" onclick="this.innerHTML = ''"></div>
+           <div id="d4" onclick="this.innerHTML = ''"></div>
+    </div>
+    <div class="room">
+      <h1>Room Five</h1>
+      <p>enter name</p>
+       <input type = "text" id = "nameFive">
+       <button onclick = "enterNameFive()">Enter</button>
+       <button onclick="lockFive()">Clean</button>
+       <button onclick="unlockFive()">Open</button>
+           <div id="e1" onclick="this.innerHTML = ''"></div>
+           <div id="e2" onclick="this.innerHTML = ''"></div>
+           <div id="e3" onclick="this.innerHTML = ''"></div>
+           <div id="e4" onclick="this.innerHTML = ''"></div>
+    </div>
+    <div class="room">
+      <h1>Room Six</h1>
+      <p>enter name</p>
+       <input type = "text" id = "nameSix">
+       <button onclick = "enterNameSix()">Enter</button>
+       <button onclick="lockSix()">Clean</button>
+       <button onclick="unlockSix()">Open</button>
+           <div id="f1" onclick="this.innerHTML = ''"></div>
+           <div id="f2" onclick="this.innerHTML = ''"></div>
+           <div id="f3" onclick="this.innerHTML = ''"></div>
+           <div id="f4" onclick="this.innerHTML = ''"></div>
+    </div>
+    <script>
+    function enterNameOne() {
+      for (i=1; i <= 4; i++) {
+        if (isFilled1("a"+i) === false) {
+          fill1("a"+i);
+          document.getElementById("nameOne").value = "";
+          break;
+        }
+      }
+    }
+    function isFilled1(person1) {
+      if (document.getElementById(person1).innerHTML === "") {
+        return false;
+      }
+      else {
+        true;
+      }
+    }
+    function fill1(person1) {
+      document.getElementById(person1).innerHTML = document.getElementById("nameOne").value;
+    }
+    function lockOne(){
+      document.getElementById("nameOne").disabled = true;
+    }
+    function unlockOne(){
+      document.getElementById("nameOne").disabled = false;
+    }
+      
+      
+    function enterNameTwo() {
+      for (i=1; i <= 4; i++) {
+        if (isFilled2("b"+i) === false) {
+          fill2("b"+i);
+          document.getElementById("nameTwo").value = "";
+          break;
+        }
+      }
+    }
+    function isFilled2(person2) {
+      if (document.getElementById(person2).innerHTML === "") {
+        return false;
+      }
+      else {
+        true;
+      }
+    }
+    function fill2(person2) {
+      document.getElementById(person2).innerHTML = document.getElementById("nameTwo").value;
+    }
+    function lockTwo(){
+        document.getElementById("nameTwo").disabled = true;
+      }
+    function unlockTwo(){
+        document.getElementById("nameTwo").disabled = false;
+      }
+      
+      
+    function enterNameThree() {
+      for (i=1; i <= 4; i++) {
+        if (isFilled3("c"+i) === false) {
+          fill3("c"+i);
+          document.getElementById("nameThree").value = "";
+          break;
+        }
+      }
+    }
+    function isFilled3(person3) {
+      if (document.getElementById(person3).innerHTML === "") {
+        return false;
+      }
+      else {
+        true;
+      }
+    }
+    function fill3(person3) {
+      document.getElementById(person3).innerHTML = document.getElementById("nameThree").value;
+    }
+    function lockThree(){
+        document.getElementById("nameThree").disabled = true;
+      }
+    function unlockThree(){
+        document.getElementById("nameThree").disabled = false;
+      }
+      
+      
+    function enterNameFour() {
+      for (i=1; i <= 4; i++) {
+        if (isFilled4("d"+i) === false) {
+          fill4("d"+i);
+          document.getElementById("nameFour").value = "";
+          break;
+        }
+      }
+    }
+    function isFilled4(person4) {
+      if (document.getElementById(person4).innerHTML === "") {
+        return false;
+      }
+      else {
+        true;
+      }
+    }
+    function fill4(person4) {
+      document.getElementById(person4).innerHTML = document.getElementById("nameFour").value;
+    }
+      function lockFour(){
+        document.getElementById("nameFour").disabled = true;
+      }
+      function unlockFour(){
+        document.getElementById("nameFour").disabled = false;
+      }
+      
+      
+    function enterNameFive() {
+      for (i=1; i <= 4; i++) {
+        if (isFilled5("e"+i) === false) {
+          fill5("e"+i);
+          document.getElementById("nameFive").value = "";
+          break;
+        }
+      }
+    }
+    function isFilled5(person5) {
+      if (document.getElementById(person5).innerHTML === "") {
+        return false;
+      }
+      else {
+        true;
+      }
+    }
+    function fill5(person5) {
+      document.getElementById(person5).innerHTML = document.getElementById("nameFive").value;
+    }
+      function lockFive(){
+        document.getElementById("nameFive").disabled = true;
+      }
+      function unlockFive(){
+        document.getElementById("nameFive").disabled = false;
+      }
+      
+      
+    function enterNameSix() {
+      for (i=1; i <= 4; i++) {
+        if (isFilled6("f"+i) === false) {
+          fill6("f"+i);
+          document.getElementById("nameSix").value = "";
+          break;
+        }
+      }
+    }
+    function isFilled6(person6) {
+      if (document.getElementById(person6).innerHTML === "") {
+        return false;
+      }
+      else {
+        true;
+      }
+    }
+    function fill6(person6) {
+      document.getElementById(person6).innerHTML = document.getElementById("nameSix").value;
+    }
+      function lockSix(){
+        document.getElementById("nameSix").disabled = true;
+      }
+      function unlockSix(){
+        document.getElementById("nameSix").disabled = false;
+      }
+    </script>
+  </body>
+</html>
